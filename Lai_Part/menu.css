@@ -10,7 +10,7 @@ nav {
     align-items: stretch;
 }
 
-#menu {
+#menu  {
     width: 220px;
     height: 100vh;
     background-color: indigo;
@@ -18,7 +18,7 @@ nav {
     transition: 1s;
 }
 
-#menu ul li a {
+#menu  ul li a {
     width: 100%;
     padding: 10px;
     font-size: 1.1em;
@@ -26,7 +26,7 @@ nav {
     text-align: center;
 }
 
-#menu ul li a:hover {
+#menu  ul li a:hover {
     /* color: ; */
     background-color: white;
     text-decoration: none;
