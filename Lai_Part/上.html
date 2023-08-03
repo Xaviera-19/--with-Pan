@@ -24,10 +24,15 @@
     <!-- Favicon-->
     <link rel="shortcut icon" href="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/favicon.png">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid vh-100">
         <!--Xaviera Start 上部 4 CARD  -->
         <div class="row mb-3">
             <!-- 第一張 -->
@@ -140,9 +145,10 @@
             </div>
         </div>
         <!-- SALES BY CHANNEL & LATEST ACTIVITY -->
-        <div class="row">
-            <div class="col-xl-9">
-                <div class="card">
+        <div class="row h-100">
+            <!-- SALES BY CHANNEL -->
+            <div class="col-xl-9 mb-4 h-100">
+                <div class="card h-100">
                     <div class="card-header d-flex">
                         <div class="text subtitle">SALES BY CHANNEL</div>
                         <div class="card-header-more">
@@ -173,12 +179,269 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-body"></div>
+                    <div class="card-body d-flex flex-column">
+                        <div class="row d-flex">
+                            <div class="col-12 col-sm-auto flex-sm-grow-1">
+                                <h3 class="subtitle text-gray-500">TOTAL REVENUE</h3>
+                                <div class="h1 text-blue">$19,200</div>
+                                <p class="  ">
+                                    +$2,032
+                                    <span class="badge badge-success-light p-1 text-base d-inline-block ms-3">
+                                        <i class="fa-solid fa-up" style="color: rgb(3, 207, 183)"></i>
+                                        19.5%
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="col-6 col-sm-auto flex-sm-grow-1 py-3 d-flex align-items-center border-start flex-column">
+                                <h3 class="subtitle text-gray-500 fw-normal w-100">TOTAL REVENUE</h3>
+                                <div class="h4 text-black fw-normal w-100">$19,200</div>
+                                <p class="w-100">
+                                    +$2,123
+                                    <span class="badge badge-success-light p-1 text-base d-inline-block ms-3">
+                                        <i class="fa-solid fa-up" style="color: rgb(3, 207, 183)"></i>
+                                        19.5%
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="col-6 col-sm-auto flex-sm-grow-1 py-3 d-flex align-items-center border-start flex-column ">
+                                <h3 class="subtitle text-gray-500 fw-normal w-100">FACEBOOK ADS</h3>
+                                <div class="h4 text-black fw-normal w-100">$2,500</div>
+                                <p class="w-100  ">
+                                    -$233
+                                    <span class="badge badge-danger-light p-1 text-base d-inline-block ms-3">
+                                        <i class="fa-solid fa-down" style="color: rgb(221, 53,69)"></i>
+                                        -2.1%
+                                    </span>
+                                </p>
+                            </div>
+                            
+                            <!-- <div class="col-auto d-none d-md-flex d-xl-none d-xxl-flex align-items-center">
+                                <div class="icon icon-xl ms-2 bg-primary-light">
+                                    <i class="fa-light fa-hand-holding fa-flip-horizontal fa-2xl" style="color: rgba(70, 80,221, 1)"></i>
+                            </div> -->
+                        </div>
+                        <!-- 圖 ROW -->
+                        <div class="row p-2 flex-grow-1">
+                            <div class="col w-100 h-auto bg-gray-300">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <ul class="d-flex flex-wrap justify-content-center">
+                                <li class="list-inline-item">
+                                    <span class="indicator bg-primary"></span>
+                                    Organic Search
+                                </li>
+                                <li class="list-inline-item">
+                                    <span class="indicator" style="background: #d0d2f3"></span>
+                                    Facebook Ads
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-xl-3"></div>
-        </div>
+            <!-- LATEST ACTIVITY -->
+            <div class="col-xl-3">
+                <div class="card-adjust-height-xl">
+                    <div class="card h-100">
+                        <div class="card-header d-flex">
+                            <div class="text subtitle">LATEST ACTIVITY</div>
+                            <div class="card-header-more">
+                                <div class="btn-group dropdown-menu-end">
+                                    <button type="button" class="btn btn-secondary  bg-transparent border-0"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-ellipsis-vertical" style="color: #b8b8b8;"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <!-- Dropdown menu links -->
+                                        <li class="dropdown-item">
+                                            <i class="fa-solid fa-maximize" style="color: #9e9e9e;"></i>
+                                            Expand
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <i class="fa-solid fa-dash" style="color: #9e9e9e;"></i>
+                                            Minimize
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <i class="fa-solid fa-rotate-right" style="color: #9e9e9e;"></i>
+                                            Reload
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <i class="fa-light fa-trash-can" style="color: #9e9e9e;"></i>
+                                            Remove
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body h-50">
+                            <div class="list-group list-group-flush list-group-timeline  h-100 overflow-scroll">
+                                <div class="list-group-item px-0 m-0">
+                                    <div class="row">
+                                        <div class="col-auto"><img class="avatar p-1 me-2"
+                                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-0.jpg"
+                                                alt="Nielsen Cobb"></div>
+                                        <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                class="text-dark">Nielsen
+                                                Cobb </strong> subscribed to your newsletter.
+                                            <div class="text-gray-500 small">3m ago</div>
+                                        </div>
+                                    </div>
+                                </div>
 
+                                <div class="list-group-item px-0">
+                                    <div class="row">
+                                        <div class="col-auto"><img class="avatar p-1 me-2"
+                                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-1.jpg"
+                                                alt="Margret Cote"></div>
+                                        <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                class="text-dark">Margret
+                                                Cote </strong> liked your post 🎉
+                                            <div class="text-gray-500 small">4m ago</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-group-item px-0">
+                                    <div class="row">
+                                        <div class="col-auto"><img class="avatar p-1 me-2"
+                                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-2.jpg"
+                                                alt="Rachel Vinson"></div>
+                                        <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                class="text-dark">Rachel
+                                                Vinson </strong> placed an order.
+                                            <div class="text-gray-500 small">5m ago</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-group-item px-0">
+                                    <div class="row">
+                                        <div class="col-auto"><img class="avatar p-1 me-2"
+                                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-3.jpg"
+                                                alt="Gabrielle Aguirre"></div>
+                                        <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                class="text-dark">Gabrielle Aguirre </strong>commented on "How to season
+                                            your new grill."
+                                            <div class="text-gray-500 small">6m ago</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-group-item px-0">
+                                    <div class="row">
+                                        <div class="col-auto"><img class="avatar p-1 me-2"
+                                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-4.jpg"
+                                                alt="Spears Collier"></div>
+                                        <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                class="text-dark">Spears
+                                                Collier </strong> subscribed to your newsletter.
+                                            <div class="text-gray-500 small">7m ago</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-group-item px-0">
+                                    <div class="row">
+                                        <div class="col-auto"><img class="avatar p-1 me-2"
+                                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-5.jpg"
+                                                alt="Keisha Thomas"></div>
+                                        <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                class="text-dark">Keisha
+                                                Thomas </strong> liked your post 🎉
+                                            <div class="text-gray-500 small">8m ago</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-group-item px-0">
+                                    <div class="row">
+                                        <div class="col-auto"><img class="avatar p-1 me-2"
+                                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-6.jpg"
+                                                alt="Elisabeth Key"></div>
+                                        <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                class="text-dark">Elisabeth Key </strong> placed an order.
+                                            <div class="text-gray-500 small">9m ago</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-group-item px-0">
+                                    <div class="row">
+                                        <div class="col-auto"><img class="avatar p-1 me-2"
+                                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-7.jpg"
+                                                alt="Patel Mack"></div>
+                                        <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                class="text-dark">Patel
+                                                Mack </strong>commented on "How to season your new grill."
+                                            <div class="text-gray-500 small">10m ago</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-group-item px-0">
+                                    <div class="row">
+                                        <div class="col-auto"><img class="avatar p-1 me-2"
+                                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-8.jpg"
+                                                alt="Erika Whitaker"></div>
+                                        <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                class="text-dark">Erika
+                                                Whitaker </strong> subscribed to your newsletter.
+                                            <div class="text-gray-500 small">11m ago</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-group-item px-0">
+                                    <div class="row">
+                                        <div class="col-auto"><img class="avatar p-1 me-2"
+                                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-9.jpg"
+                                                alt="Meyers Swanson"></div>
+                                        <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                class="text-dark">Meyers
+                                                Swanson </strong> liked your post 🎉
+                                            <div class="text-gray-500 small">12m ago</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-group-item px-0">
+                                    <div class="row">
+                                        <div class="col-auto"><img class="avatar p-1 me-2"
+                                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-10.jpg"
+                                                alt="Townsend Sloan"></div>
+                                        <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                class="text-dark">Townsend
+                                                Sloan </strong> placed an order.
+                                            <div class="text-gray-500 small">13m ago</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-group-item px-0">
+                                    <div class="row">
+                                        <div class="col-auto"><img class="avatar p-1 me-2"
+                                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-11.jpg"
+                                                alt="Millicent Henry"></div>
+                                        <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                class="text-dark">Millicent Henry </strong>commented on "How to season
+                                            your
+                                            new grill."
+                                            <div class="text-gray-500 small">14m ago</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card-body"></div>
+            </div>
+        </div>
+        <!--Xaviera END -->
     </div>
 
 
