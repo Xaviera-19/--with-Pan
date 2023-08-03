@@ -32,7 +32,7 @@ nav {
     text-decoration: none;
 }
 
-#menu.active {
+#menu.menu-active {
     margin-left: -220px;
 }
 

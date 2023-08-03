@@ -11,6 +11,6 @@ console.log(document.querySelector("#collapse"))
 document.querySelector("#collapse").addEventListener("click",
     function () {
         console.log(document.querySelector("#menu").classList)
-        document.querySelector("#menu").classList.toggle('active');
+        document.querySelector("#menu").classList.toggle('menu-active');
     }
 );
