@@ -3,11 +3,7 @@
   --font-12px: 12px;
   --reset: reset;
   --25px: 25px;
-}
-nav {
-  height: 100px;
-  display: flex;
-  background-color: antiquewhite;
+  --QQrem: 1px;
 }
 .container-all {
   display: flex;
@@ -93,22 +89,22 @@ nav {
     margin-left: -100px;
   }
 }
-@media (max-width: 992px){
-  #main{
+@media (max-width: 992px) {
+  #main {
     // width: calc(100% - 105px) !important;
     width: calc(100% - 100px) !important;
     // margin: 10px !important;
   }
-  #main.main-active{
+  #main.main-active {
     width: 100% !important;
   }
 }
-@media (max-width: 768px){
-  #main{
+@media (max-width: 768px) {
+  #main {
     // width: calc(100% - 105px) !important;
     width: calc(100% - 100px) !important;
   }
-  #main.main-active{
+  #main.main-active {
     width: 100% !important;
   }
 }

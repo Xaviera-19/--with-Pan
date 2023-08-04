@@ -3,12 +3,7 @@
   --font-12px: 12px;
   --reset: reset;
   --25px: 25px;
-}
-
-nav {
-  height: 100px;
-  display: flex;
-  background-color: antiquewhite;
+  /* --QQrem: 1px; */
 }
 
 .container-all {
