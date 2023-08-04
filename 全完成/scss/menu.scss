@@ -42,13 +42,16 @@ nav {
     }
     // 箭頭角度 跟 顏色
 
-    .accordion-button:nth-of-type(1)::after {
-      // fill: white;
-      background-image: url("../img/downarrow.svg");
+    // .accordion-button:nth-of-type(1)::after {
+    //   // fill: white;
+    //   background-image: url('../img/downarrow.svg');
     }
-    .accordion-button:nth-of-type(n + 1)::after {
-      // fill: #aaaaaa;
-      background-image: url("../img/downarrowgray.svg");
+    // .accordion-button:nth-of-type(n + 1)::after {
+    //   // fill: #aaaaaa;
+    //   background-image: url('../img/downarrowgray.svg');
+    // }
+    .accordion-button::after{
+      background-image: url(../img/downarrowgray.svg);
     }
     ul li a {
       width: 100%;
@@ -63,7 +66,7 @@ nav {
       text-decoration: none;
     }
   }
-}
+
 
 // 縮起乃
 #menu.menu-active {
