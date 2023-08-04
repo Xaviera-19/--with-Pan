@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
-    <link rel="stylesheet" href="./menu.css">
+    <link rel="stylesheet" href="./css/menu.css">
 </head>
 
 <body>
@@ -20,21 +20,26 @@
     <main class="container-all">
         <div id="menu">
             <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div id="menu-text" class=" text-start text-black-50 p-2 text-center text-xl-start sidebar">Main</div>
                 <!-- Dashboards -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                        <button class="bg-p accordion-button collapsed p-1 p-xl-3 align-items-center d-flex active" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            <i class="fa-light fa-house-chimney fa-xl "></i>
-                            Dashboards
+                            <div class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center">
+                                <i class="fa-light fa-house-chimney fa-xl d-block icon m-auto m-xl-0"></i>
+                                <div class="h-100 menu-topic">Dashboards</div>
+                            </div>
                         </button>
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse " aria-labelledby="flush-headingOne"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body p-0">
                             <ul class="text-black-50 list-unstyled p-1">
-                                <!-- text-muted -->
-                                <li><a href="#" class="text-decoration-none text-muted text-start active">Default</a></li>
+                                <!-- text-muted 重製字體-->
+                                <!-- 下拉選單內容 -->
+                                <li><a href="#" class="text-decoration-none text-muted text-start active">Default</a>
+                                </li>
                                 <li><a href="#" class="text-decoration-none text-muted text-start ">CMS</a></li>
                                 <li><a href="#" class="text-decoration-none text-muted text-start ">E-commerce</a></li>
                                 <li><a href="#" class="text-decoration-none text-muted text-start ">Projects</a></li>
@@ -46,19 +51,29 @@
                 </div>
                 <!-- CMS -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            CMS
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="bg-w accordion-button collapsed p-1 p-xl-3 align-items-center d-flex active" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <div class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center">
+                                <i class="fa-light fa-house-chimney fa-xl d-block icon m-auto m-xl-0"></i>
+                                <div class="h-100 menu-topic">Dashboards</div>
+                            </div>
                         </button>
                     </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    <div id="flush-collapseOne" class="accordion-collapse collapse " aria-labelledby="flush-headingOne"
                         data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the
-                            <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine
-                            this
-                            being filled with some actual content.
+                        <div class="accordion-body p-0">
+                            <ul class="text-black-50 list-unstyled p-1">
+                                <!-- text-muted 重製字體-->
+                                <!-- 下拉選單內容 -->
+                                <li><a href="#" class="text-decoration-none text-muted text-start active">Default</a>
+                                </li>
+                                <li><a href="#" class="text-decoration-none text-muted text-start ">CMS</a></li>
+                                <li><a href="#" class="text-decoration-none text-muted text-start ">E-commerce</a></li>
+                                <li><a href="#" class="text-decoration-none text-muted text-start ">Projects</a></li>
+                                <li><a href="#" class="text-decoration-none text-muted text-start ">Charts</a></li>
+
+                            </ul>
                         </div>
                     </div>
                 </div>
