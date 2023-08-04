@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    <link rel="stylesheet" href="./css/menu.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&amp;display=swap"
+        rel="stylesheet">
+    <!-- Prism Syntax Highlighting-->
+    <link rel="stylesheet"
+        href="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/vendor/prismjs/plugins/toolbar/prism-toolbar.css">
+    <link rel="stylesheet"
+        href="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/vendor/prismjs/themes/prism-okaidia.css">
+    <!-- The Main Theme stylesheet (Contains also Bootstrap CSS)-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/css/style.default.63c85ff9.css"
+        id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/css/custom.0a822280.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/favicon.png">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    <style>
+        .dataTable-pagination ul {
+            background-color: #F8F9FA !important;
+        }
+
+        .sidebar {
+            width: 80%;
+            background-color: transparent !important;
+            box-shadow: unset !important;
+        }
+
+        .fa-xl {
+            line-height: unset !important;
+            object-fit: fill;
+            font-size: 2em;
+        }
+
+        .fa-regular {
+            margin: unset !important;
+        }
+
+        .accordion-header {
+            font-size: 100px !important;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg px-4 py-2 bg-white shadow"><button type="button" id="collapse"
+                class="btn  collapse-btn bg-transparent">
+                <i class="fa-duotone fa-align-left fa-2xl "></i>
+            </button><a class="navbar-brand fw-bold text-uppercase text-base" href="index.html"><span
+                    class="d-none d-brand-partial">Bubbly </span><span class="d-none d-sm-inline">Dashboard</span></a>
+            <ul class="ms-auto d-flex align-items-center list-unstyled mb-0">
+                <li class="nav-item dropdown">
+                    <form class="ms-auto me-4 d-none d-lg-block" id="searchForm">
+                        <div class="input-group input-group-sm input-group-navbar">
+                            <input class="form-control" id="searchInput" type="search" placeholder="Search">
+                            <button class="btn" type="button"> <i class="fas fa-search"></i></button>
+                        </div>
+                    </form>
+                    <div class="dropdown-menu dropdown-menu-animated text-sm" id="searchDropdownMenu">
+                        <h6 class="dropdown-header text-uppercase fw-normal">Recent pages</h6><a
+                            class="dropdown-item py-1" href="cms-post.html"> <i class="far fa-file me-2">
+                            </i>Posts</a><a class="dropdown-item py-1" href="widgets-stats.html"> <i
+                                class="far fa-file me-2"> </i>Widgets</a><a class="dropdown-item py-1"
+                            href="pages-profile.html"> <i class="far fa-file me-2"> </i>Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header text-uppercase fw-normal">Users</h6><a class="dropdown-item py-1"
+                            href="pages-profile.html"> <img class="avatar avatar-xs p-1 me-2"
+                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-0.jpg"
+                                alt="Jason Doe"><span>Jason Doe</span></a><a class="dropdown-item py-1"
+                            href="pages-profile.html"> <img class="avatar avatar-xs p-1 me-2"
+                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-1.jpg"
+                                alt="Frank Williams"><span>Frank Williams</span></a><a class="dropdown-item py-1"
+                            href="pages-profile.html"> <img class="avatar avatar-xs p-1 me-2"
+                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-2.jpg"
+                                alt="Ashley Wood"><span>Ashley Wood</span></a>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header text-uppercase fw-normal">Filters</h6><a class="dropdown-item py-1"
+                            href="#!"> <span class="badge me-2 badge-success-light">Posts</span><span
+                                class="text-xs">Search all posts</span></a><a class="dropdown-item py-1" href="#!">
+                            <span class="badge me-2 badge-danger-light">Users</span><span class="text-xs">Only in
+                                users</span></a><a class="dropdown-item py-1" href="#!"> <span
+                                class="badge me-2 badge-warning-light">Campaigns</span><span class="text-xs">Only in
+                                campaigns</span></a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown me-2"><a class="nav-link nav-link-icon text-gray-400 px-1"
+                        id="notifications" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <svg class="svg-icon svg-icon-md svg-icon-heavy">
+                            <i class="fa-light fa-chart-mixed fa-lg" style="color: #adb5c2;"></i>
+                        </svg><span class="notification-badge bg-green"></span></a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated text-sm"
+                        aria-labelledby="notifications"><a class="dropdown-item" href="#">
+                            <div class="d-flex align-items-center">
+                                <div class="icon icon-sm bg-indigo text-white"><i class="fab fa-twitter"></i></div>
+                                <div class="text ms-2">
+                                    <p class="mb-0">You have 2 followers</p>
+                                </div>
+                            </div>
+                        </a><a class="dropdown-item" href="#">
+                            <div class="d-flex align-items-center">
+                                <div class="icon icon-sm bg-green text-white"><i class="fas fa-envelope"></i></div>
+                                <div class="text ms-2">
+                                    <p class="mb-0">You have 6 new messages</p>
+                                </div>
+                            </div>
+                        </a><a class="dropdown-item" href="#">
+                            <div class="d-flex align-items-center">
+                                <div class="icon icon-sm bg-blue text-white"><i class="fas fa-upload"></i></div>
+                                <div class="text ms-2">
+                                    <p class="mb-0">Server rebooted</p>
+                                </div>
+                            </div>
+                        </a><a class="dropdown-item" href="#">
+                            <div class="d-flex align-items-center">
+                                <div class="icon icon-sm bg-indigo text-white"><i class="fab fa-twitter"></i></div>
+                                <div class="text ms-2">
+                                    <p class="mb-0">You have 2 followers</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div><a class="dropdown-item text-center" href="#"><small
+                                class="fw-bold text-uppercase">View all notifications</small></a>
+                    </div>
+                </li>
+                <!-- Messages                        -->
+                <li class="nav-item dropdown me-2 me-lg-3"> <a class="nav-link nav-link-icon text-gray-400 px-1"
+                        id="messages" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg class="svg-icon svg-icon-md svg-icon-heavy">
+                            <i class="fa-light fa-paper-plane fa-xl"></i>
+                        </svg><span class="notification-badge notification-badge-number bg-primary">10</span></a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated text-sm"
+                        aria-labelledby="messages"><a class="dropdown-item d-flex align-items-center p-3" href="#"> <img
+                                class="avatar avatar-sm p-1 me-2"
+                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-0.jpg"
+                                alt="Jason Doe">
+                            <div class="pt-1">
+                                <h6 class="fw-bold mb-0">Jason Doe</h6><span class="text-muted text-sm">Sent you a
+                                    message</span>
+                            </div>
+                        </a><a class="dropdown-item d-flex align-items-center p-3" href="#"> <img
+                                class="avatar avatar-sm p-1 me-2"
+                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-1.jpg"
+                                alt="Frank Williams">
+                            <div class="pt-1">
+                                <h6 class="fw-bold mb-0">Frank Williams</h6><span class="text-muted text-sm">Sent you a
+                                    message</span>
+                            </div>
+                        </a><a class="dropdown-item d-flex align-items-center p-3" href="#"> <img
+                                class="avatar avatar-sm p-1 me-2"
+                                src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-2.jpg"
+                                alt="Ashley Wood">
+                            <div class="pt-1">
+                                <h6 class="fw-bold mb-0">Ashley Wood</h6><span class="text-muted text-sm">Sent you a
+                                    message</span>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div><a class="dropdown-item text-center" href="#"> <small
+                                class="fw-bold text-uppercase">View all messages </small></a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown ms-auto"><a class="nav-link pe-0" id="userInfo" href="#"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="avatar p-1"
+                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-6.jpg"
+                            alt="Jason Doe"></a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated" aria-labelledby="userInfo">
+                        <div class="dropdown-header text-gray-700">
+                            <h6 class="text-uppercase font-weight-bold">Mark Stephen</h6><small>Web Developer</small>
+                        </div>
+                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Settings</a><a
+                            class="dropdown-item" href="#">Activity log </a>
+                        <div class="dropdown-divider"></div><a class="dropdown-item" href="login.html">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container-all">
+        <div id="menu">
+            <div class="accordion accordion-flush align-items-center justify-content-center" id="accordionFlushExample">
+                <div class="w-100 h-auto">
+                    <h6 class="menu-text text-start text-black-50 p-2 text-center text-xl-start sidebar m-auto m-xl-0">Main</h6>
+                </div>
+                
+                <!-- 1.Dashboards -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="bg-p accordion-button collapsed p-1 p-xl-3 align-items-center d-flex active"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                            aria-expanded="false" aria-controls="flush-collapseOne">
+                            <div class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center">
+                                <i class="fa-light fa-house-chimney fa-xl d-block icon m-auto m-xl-0"></i>
+                                <div class="h-100 menu-topic">Dashboards</div>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse " aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-0">
+                            <ul class="text-black-50 list-unstyled p-1 m-1">
+                                <!-- text-muted 重製字體-->
+                                <!-- 下拉選單內容 -->
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Default</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">CMS</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">E-commerce</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Projects</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Charts</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2.CMS -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="bg-w accordion-button collapsed p-1 p-xl-3 align-items-center d-flex active"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <div class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center">
+                                <i class="fa-regular fa-book-open fa-xl d-block icon m-auto m-xl-0"></i>
+                                <div class="h-100 menu-topic">CMS</div>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse " aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-0">
+                            <ul class="text-black-50 list-unstyled p-1 m-1">
+                                <!-- text-muted 重製字體-->
+                                <!-- 下拉選單內容 -->
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Posts</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Add
+                                        new post</a></li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Categories</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start">Media
+                                        library</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3.Widgets -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="bg-w accordion-button collapsed p-1 p-xl-3 align-items-center d-flex active"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                            aria-expanded="false" aria-controls="flush-collapseThree">
+                            <div class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center">
+                                <i class="fa-light fa-file-lines fa-xl d-block icon m-auto m-xl-0"></i>
+                                <div class="h-100 menu-topic">Widgets</div>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse "
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-0">
+                            <ul class="text-black-50 list-unstyled p-1 m-1">
+                                <!-- text-muted 重製字體-->
+                                <!-- 下拉選單內容 -->
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Stats</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Data</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4.E-commerce -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="bg-w accordion-button collapsed p-1 p-xl-3 align-items-center d-flex active"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
+                            aria-expanded="false" aria-controls="flush-collapseFour">
+                            <div class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center">
+                                <i class="fa-light fa-truck fa-xl d-block icon m-auto m-xl-0"></i>
+                                <div class="h-100 menu-topic">E-commerce</div>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse "
+                        aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-0">
+                            <ul class="text-black-50 list-unstyled p-1 m-1">
+                                <!-- text-muted 重製字體-->
+                                <!-- 下拉選單內容 -->
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Products</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Products-New</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Orders</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Order-Detail</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Custimers</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5.Pages -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFive">
+                        <button class="bg-w accordion-button collapsed p-1 p-xl-3 align-items-center d-flex active"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
+                            aria-expanded="false" aria-controls="flush-collapseFive">
+                            <div class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center">
+                                <i class="fa-light fa-layer-group fa-xl d-block icon m-auto m-xl-0"></i>
+                                <div class="h-100 menu-topic">Pages</div>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse "
+                        aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-0">
+                            <ul class="text-black-50 list-unstyled p-1 m-1">
+                                <!-- text-muted 重製字體-->
+                                <!-- 下拉選單內容 -->
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Profile</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Pricing
+                                        table</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Contacts</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Invoice</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Knowledge
+                                        base</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Knowledge
+                                        base-Topic</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 6.User -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSix">
+                        <button class="bg-w accordion-button collapsed p-1 p-xl-3 align-items-center d-flex active"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix"
+                            aria-expanded="false" aria-controls="flush-collapseSix">
+                            <div class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center">
+                                <i class="fa-light fa-user-vneck-hair fa-xl d-block icon m-auto m-xl-0"></i>
+                                <div class="h-100 menu-topic">User</div>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse " aria-labelledby="flush-headingSix"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-0">
+                            <ul class="text-black-50 list-unstyled p-1 m-1">
+                                <!-- text-muted 重製字體-->
+                                <!-- 下拉選單內容 -->
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Login
+                                        page</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Register</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Login
+                                        v.2</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Register
+                                        v.2</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7.Components -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSeven">
+                        <button class="bg-w accordion-button collapsed p-1 p-xl-3 align-items-center d-flex active"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven"
+                            aria-expanded="false" aria-controls="flush-collapseSeven">
+                            <div class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center">
+                                <i class="fa-light fa-sliders fa-xl d-block icon m-auto m-xl-0"></i>
+                                <div class="h-100 menu-topic">Components</div>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSeven" class="accordion-collapse collapse "
+                        aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-0">
+                            <ul class="text-black-50 list-unstyled p-1 m-1">
+                                <!-- text-muted 重製字體-->
+                                <!-- 下拉選單內容 -->
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Cards</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Calendar</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Gallery</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Loading
+                                        buttons</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Maps</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Notifications</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Preloaders</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8.Charts -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingEight">
+                        <button class="bg-w accordion-button collapsed p-1 p-xl-3 align-items-center d-flex active"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight"
+                            aria-expanded="false" aria-controls="flush-collapseEight">
+                            <div class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center">
+                                <i class="fa-light fa-chart-pie fa-xl d-block icon m-auto m-xl-0"></i>
+                                <div class="h-100 menu-topic">Charts</div>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseEight" class="accordion-collapse collapse "
+                        aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-0">
+                            <ul class="text-black-50 list-unstyled p-1 m-1">
+                                <!-- text-muted 重製字體-->
+                                <!-- 下拉選單內容 -->
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Charts</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Gauge
+                                        + Sparkline</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9.Form -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingNine">
+                        <button class="bg-w accordion-button collapsed p-1 p-xl-3 align-items-center d-flex active"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine"
+                            aria-expanded="false" aria-controls="flush-collapseNine">
+                            <div class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center">
+                                <i class="fa-light fa-cabinet-filing fa-xl d-block icon m-auto m-xl-0 "></i>
+                                <div class="h-100 menu-topic">Form</div>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseNine" class="accordion-collapse collapse "
+                        aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-0">
+                            <ul class="text-black-50 list-unstyled p-1 m-1">
+                                <!-- text-muted 重製字體-->
+                                <!-- 下拉選單內容 -->
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Basic
+                                        forms</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Advanced
+                                        forms</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Files
+                                        upload</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Text
+                                        editor</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Validation</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Table -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTen">
+                        <button class="bg-w accordion-button collapsed p-1 p-xl-3 align-items-center d-flex active"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen"
+                            aria-expanded="false" aria-controls="flush-collapseTen">
+                            <div class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center">
+                                <i class="fa-light fa-table-cells-large fa-xl d-block icon m-auto m-xl-0"></i>
+                                <div class="h-100 menu-topic">Table</div>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTen" class="accordion-collapse collapse " aria-labelledby="flush-headingTen"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-0">
+                            <ul class="text-black-50 list-unstyled p-1 m-1">
+                                <!-- text-muted 重製字體-->
+                                <!-- 下拉選單內容 -->
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Bootstrap
+                                        tables</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Datatable</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 h-auto">
+                    <h6 class="menu-text text-start text-black-50 p-2 text-center text-xl-start sidebar m-auto m-xl-0">DOCS</h6>
+                </div>
+                <!-- 11. Introduction -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header m-auto m-xl-0" id="flush-heading-11">
+                        <button
+                            class="bg-w border-0 m-auto m-xl-0 collapsed p-1 p-xl-3 align-items-center d-flex active"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-11"
+                            aria-expanded="false" aria-controls="flush-collapse-11">
+                            <div
+                                class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center text-muted text-muted">
+                                <i class="fa-light fa-code-simple fa-xl d-block icon m-auto m-xl-0"></i>
+                                <div class="h-100 menu-topic ">Introduction</div>
+                            </div>
+                        </button>
+                    </h2>
+
+                </div>
+
+                <!-- 12. Directory structure -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header m-auto m-xl-0" id="flush-heading-12">
+                        <button
+                            class="bg-w border-0 m-auto m-xl-0 collapsed p-1 p-xl-3 align-items-center d-flex active"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-12"
+                            aria-expanded="false" aria-controls="flush-collapse-12">
+                            <div
+                                class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center text-muted text-muted">
+                                <i class="fa-regular fa-window fa-xl d-block icon m-auto m-xl-0"></i>
+                                <div class="h-100 menu-topic ">Directory structure</div>
+                            </div>
+                        </button>
+                    </h2>
+
+                </div>
+                <!-- 13. Gulp.js -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header m-auto m-xl-0" id="flush-heading-13">
+                        <button
+                            class="bg-w border-0 m-auto m-xl-0 collapsed p-1 p-xl-3 align-items-center d-flex active"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-13"
+                            aria-expanded="false" aria-controls="flush-collapse-13">
+                            <div
+                                class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center text-muted text-muted">
+                                <i class="fa-sharp fa-light fa-keyboard fa-xl d-block icon m-auto m-xl-0"></i>
+                                <div class="h-100 menu-topic ">Gulp.js</div>
+                            </div>
+                        </button>
+                    </h2>
+
+                </div>
+                <!-- 14. CSS -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading-14">
+                        <button class="bg-w accordion-button collapsed p-1 p-xl-3 align-items-center d-flex active"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-14"
+                            aria-expanded="false" aria-controls="flush-collapse-14">
+                            <div
+                                class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center text-muted text-muted">
+                                <i class="fa-light fa-pen-ruler fa-xl d-block icon m-auto m-xl-0"></i>
+                                <div class="h-100 menu-topic ">CSS</div>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="flush-collapse-14" class="accordion-collapse collapse " aria-labelledby="flush-heading-14"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-0">
+                            <ul class="text-black-50 list-unstyled p-1 m-1">
+                                <!-- text-muted 重製字體-->
+                                <!-- 下拉選單內容 -->
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">CSS
+                                        Components</a>
+                                </li>
+                                <li><a href="#"
+                                        class="p-1 p-xl-2 text-decoration-none text-muted text-center text-xl-start ">Customizing
+                                        CSS</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 15. Credits -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header m-auto m-xl-0" id="flush-heading-15">
+                        <button
+                            class="bg-w border-0 m-auto m-xl-0 collapsed p-1 p-xl-3 align-items-center d-flex active"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-15"
+                            aria-expanded="false" aria-controls="flush-collapse-15">
+                            <div
+                                class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center text-muted text-muted">
+                                <i class="fa-sharp fa-light fa-medal fa-xl d-block icon m-auto m-xl-0"></i>
+                                <div class="h-100 menu-topic ">Credits</div>
+                            </div>
+                        </button>
+                    </h2>
+
+                </div>
+                <!-- 16.Changelog -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header m-auto m-xl-0" id="flush-heading-16">
+                        <button
+                            class="bg-w border-0 m-auto m-xl-0 collapsed p-1 p-xl-3 align-items-center d-flex active"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-16"
+                            aria-expanded="false" aria-controls="flush-collapse-16">
+                            <div
+                                class="h-100 w-100 d-flex flex-column flex-xl-row align-items-center text-muted text-muted">
+                                <i class="fa-light fa-circle-star fa-xl d-block icon m-auto m-xl-0"></i>
+                                <div class="h-100 menu-topic ">Changelog</div>
+                            </div>
+                        </button>
+                    </h2>
+
+                </div>
+            </div>
+
+        </div>
+        <main id="main" class="pt-5 flex-grow-1 ">
+
+            <div class="px-lg-4 px-xl-5">
+                <h1 class="page-heading p-5">Default dashboard</h1>
+                <div class="w-100">
+                    <!--Xaviera Start 上部 4 CARD  -->
+                    <div class="row mb-3">
+                        <!-- 第一張 -->
+                        <div class="col-sm-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body p-5">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <h4 class="fw-normal text-red">$10,500</h4>
+                                            <p class="subtitle text-sm text-muted mb-0">Earnings</p>
+                                        </div>
+                                        <div class="flex-shrink-0 ms-3">
+                                            <!-- 圖標 -->
+                                            <i class="fa-thin fa-gauge-low fa-2xl" style="color: #dc3545;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer py-3 bg-red-light">
+                                    <div class="row align-items-center text-red">
+                                        <div class="col-10">
+                                            <p class="mb-0">20% increase</p>
+                                        </div>
+                                        <div class="col-2 mb-0">
+                                            <i class="fa-solid fa-sort-up text-end" style="color: #dc3545"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第二張 -->
+                        <div class="col-sm-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body p-5">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <h4 class="fw-normal text-blue">584</h4>
+                                            <p class="subtitle text-sm text-muted mb-0">READERS</p>
+                                        </div>
+                                        <div class="flex-shrink-0 ms-3">
+                                            <!-- 圖標 -->
+                                            <i class="fa-thin fa-book-open-cover fa-2xl" style="color: #0d6efd;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-blue-light">
+                                    <div class="row">
+                                        <div class="col-10 ">
+                                            <p class="text-blue mb-0">3% increase</p>
+                                        </div>
+                                        <div class="col-2 mb-0">
+                                            <i class="fa-solid fa-sort-up text-end" style="color: #0d6efd"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第三張 -->
+                        <div class="col-sm-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body p-5">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <h4 class="fw-normal text-primary">876</h4>
+                                            <p class="subtitle text-sm text-muted mb-0">BOOKMARKS</p>
+                                        </div>
+                                        <div class="flex-shrink-0 ms-3">
+                                            <!-- 圖標 -->
+                                            <i class="fa-thin fa-book-bookmark fa-2xl" style="color: #737be5;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-primary-light">
+                                    <div class="row">
+                                        <div class="col-10 ">
+                                            <p class="text-primary mb-0">10% increase</p>
+                                        </div>
+                                        <div class="col-2 mb-0">
+                                            <i class="fa-solid fa-sort-up text-end" style="color: #737be5;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第四張 -->
+                        <div class="col-sm-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body p-5">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <h4 class="fw-normal text-green">3,500</h4>
+                                            <p class="subtitle text-sm text-muted mb-0">VISITORS</p>
+                                        </div>
+                                        <div class="flex-shrink-0 ms-3">
+                                            <!-- 圖標 -->
+                                            <i class="fa-thin fa-earth-americas fa-2xl" style="color: #34b652;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-green-light">
+                                    <div class="row">
+                                        <div class="col-10 ">
+                                            <p class="text-green mb-0">5% decrease</p>
+                                        </div>
+                                        <div class="col-2 mb-0">
+                                            <i class="fa-solid fa-sort-down text-end" style="color: #34b652"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SALES BY CHANNEL & LATEST ACTIVITY -->
+                    <div class="row h-100">
+                        <!-- SALES BY CHANNEL -->
+                        <div class="col-xl-9 mb-4 h-100">
+                            <div class="card h-100">
+                                <div class="card-header d-flex">
+                                    <div class="text subtitle">SALES BY CHANNEL</div>
+                                    <div class="card-header-more">
+                                        <div class="btn-group dropdown-menu-end">
+                                            <button type="button" class="btn btn-secondary  bg-transparent border-0"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-solid fa-ellipsis-vertical" style="color: #b8b8b8;"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <!-- Dropdown menu links -->
+                                                <li class="dropdown-item">
+                                                    <i class="fa-solid fa-maximize" style="color: #9e9e9e;"></i>
+                                                    Expand
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <i class="fa-solid fa-dash" style="color: #9e9e9e;"></i>
+                                                    Minimize
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <i class="fa-solid fa-rotate-right" style="color: #9e9e9e;"></i>
+                                                    Reload
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <i class="fa-light fa-trash-can" style="color: #9e9e9e;"></i>
+                                                    Remove
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <div class="row d-flex">
+                                        <div class="col-12 col-sm-auto flex-sm-grow-1">
+                                            <h3 class="subtitle text-gray-500">TOTAL REVENUE</h3>
+                                            <div class="h1 text-blue">$19,200</div>
+                                            <p class="  ">
+                                                +$2,032
+                                                <span
+                                                    class="badge badge-success-light p-1 text-base d-inline-block ms-3">
+                                                    <i class="fa-solid fa-up" style="color: rgb(3, 207, 183)"></i>
+                                                    19.5%
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="col-6 col-sm-auto flex-sm-grow-1 py-3 d-flex align-items-center border-start flex-column">
+                                            <h3 class="subtitle text-gray-500 fw-normal w-100">TOTAL REVENUE</h3>
+                                            <div class="h4 text-black fw-normal w-100">$19,200</div>
+                                            <p class="w-100">
+                                                +$2,123
+                                                <span
+                                                    class="badge badge-success-light p-1 text-base d-inline-block ms-3">
+                                                    <i class="fa-solid fa-up" style="color: rgb(3, 207, 183)"></i>
+                                                    19.5%
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="col-6 col-sm-auto flex-sm-grow-1 py-3 d-flex align-items-center border-start flex-column ">
+                                            <h3 class="subtitle text-gray-500 fw-normal w-100">FACEBOOK ADS</h3>
+                                            <div class="h4 text-black fw-normal w-100">$2,500</div>
+                                            <p class="w-100  ">
+                                                -$233
+                                                <span
+                                                    class="badge badge-danger-light p-1 text-base d-inline-block ms-3">
+                                                    <i class="fa-solid fa-down" style="color: rgb(221, 53,69)"></i>
+                                                    -2.1%
+                                                </span>
+                                            </p>
+                                        </div>
+
+                                        <div class="col-auto d-none d-md-flex d-xl-none d-xxl-flex align-items-center">
+                                            <div class="icon icon-xl ms-2 bg-primary-light">
+                                                <i class="fa-light fa-hand-holding fa-flip-horizontal fa-2xl"
+                                                    style="color: rgba(70, 80,221, 1)"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 圖 ROW -->
+                                    <div class="row p-2 flex-grow-1">
+                                        <div class="col w-100 h-auto">
+                                            <img src="./img/picture.webp" alt="沒有放圖片" class="img-fluid img mx-auto h-100">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <ul class="d-flex flex-wrap justify-content-center">
+                                            <li class="list-inline-item">
+                                                <span class="indicator bg-primary"></span>
+                                                Organic Search
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <span class="indicator" style="background: #d0d2f3"></span>
+                                                Facebook Ads
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- LATEST ACTIVITY -->
+                        <div class="col-xl-3 pb-3">
+                            <div class="card-adjust-height-xl">
+                                <div class="card h-100">
+                                    <div class="card-header d-flex">
+                                        <div class="text subtitle">LATEST ACTIVITY</div>
+                                        <div class="card-header-more">
+                                            <div class="btn-group dropdown-menu-end">
+                                                <button type="button" class="btn btn-secondary  bg-transparent border-0"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="fa-solid fa-ellipsis-vertical"
+                                                        style="color: #b8b8b8;"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <!-- Dropdown menu links -->
+                                                    <li class="dropdown-item">
+                                                        <i class="fa-solid fa-maximize" style="color: #9e9e9e;"></i>
+                                                        Expand
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <i class="fa-solid fa-dash" style="color: #9e9e9e;"></i>
+                                                        Minimize
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <i class="fa-solid fa-rotate-right" style="color: #9e9e9e;"></i>
+                                                        Reload
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <i class="fa-light fa-trash-can" style="color: #9e9e9e;"></i>
+                                                        Remove
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body h-50">
+                                        <div
+                                            class="list-group list-group-flush list-group-timeline  h-100 overflow-scroll overflow-x-hidden">
+                                            <div class="list-group-item px-0 m-0">
+                                                <div class="row">
+                                                    <div class="col-auto"><img class="avatar p-1 me-2"
+                                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-0.jpg"
+                                                            alt="Nielsen Cobb"></div>
+                                                    <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                            class="text-dark">Nielsen
+                                                            Cobb </strong> subscribed to your newsletter.
+                                                        <div class="text-gray-500 small">3m ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="list-group-item px-0">
+                                                <div class="row">
+                                                    <div class="col-auto"><img class="avatar p-1 me-2"
+                                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-1.jpg"
+                                                            alt="Margret Cote"></div>
+                                                    <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                            class="text-dark">Margret
+                                                            Cote </strong> liked your post 🎉
+                                                        <div class="text-gray-500 small">4m ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="list-group-item px-0">
+                                                <div class="row">
+                                                    <div class="col-auto"><img class="avatar p-1 me-2"
+                                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-2.jpg"
+                                                            alt="Rachel Vinson"></div>
+                                                    <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                            class="text-dark">Rachel
+                                                            Vinson </strong> placed an order.
+                                                        <div class="text-gray-500 small">5m ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="list-group-item px-0">
+                                                <div class="row">
+                                                    <div class="col-auto"><img class="avatar p-1 me-2"
+                                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-3.jpg"
+                                                            alt="Gabrielle Aguirre"></div>
+                                                    <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                            class="text-dark">Gabrielle Aguirre </strong>commented on
+                                                        "How
+                                                        to
+                                                        season
+                                                        your new grill."
+                                                        <div class="text-gray-500 small">6m ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="list-group-item px-0">
+                                                <div class="row">
+                                                    <div class="col-auto"><img class="avatar p-1 me-2"
+                                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-4.jpg"
+                                                            alt="Spears Collier"></div>
+                                                    <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                            class="text-dark">Spears
+                                                            Collier </strong> subscribed to your newsletter.
+                                                        <div class="text-gray-500 small">7m ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="list-group-item px-0">
+                                                <div class="row">
+                                                    <div class="col-auto"><img class="avatar p-1 me-2"
+                                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-5.jpg"
+                                                            alt="Keisha Thomas"></div>
+                                                    <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                            class="text-dark">Keisha
+                                                            Thomas </strong> liked your post 🎉
+                                                        <div class="text-gray-500 small">8m ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="list-group-item px-0">
+                                                <div class="row">
+                                                    <div class="col-auto"><img class="avatar p-1 me-2"
+                                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-6.jpg"
+                                                            alt="Elisabeth Key"></div>
+                                                    <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                            class="text-dark">Elisabeth Key </strong> placed an order.
+                                                        <div class="text-gray-500 small">9m ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="list-group-item px-0">
+                                                <div class="row">
+                                                    <div class="col-auto"><img class="avatar p-1 me-2"
+                                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-7.jpg"
+                                                            alt="Patel Mack"></div>
+                                                    <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                            class="text-dark">Patel
+                                                            Mack </strong>commented on "How to season your new grill."
+                                                        <div class="text-gray-500 small">10m ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="list-group-item px-0">
+                                                <div class="row">
+                                                    <div class="col-auto"><img class="avatar p-1 me-2"
+                                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-8.jpg"
+                                                            alt="Erika Whitaker"></div>
+                                                    <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                            class="text-dark">Erika
+                                                            Whitaker </strong> subscribed to your newsletter.
+                                                        <div class="text-gray-500 small">11m ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="list-group-item px-0">
+                                                <div class="row">
+                                                    <div class="col-auto"><img class="avatar p-1 me-2"
+                                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-9.jpg"
+                                                            alt="Meyers Swanson"></div>
+                                                    <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                            class="text-dark">Meyers
+                                                            Swanson </strong> liked your post 🎉
+                                                        <div class="text-gray-500 small">12m ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="list-group-item px-0">
+                                                <div class="row">
+                                                    <div class="col-auto"><img class="avatar p-1 me-2"
+                                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-10.jpg"
+                                                            alt="Townsend Sloan"></div>
+                                                    <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                            class="text-dark">Townsend
+                                                            Sloan </strong> placed an order.
+                                                        <div class="text-gray-500 small">13m ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="list-group-item px-0">
+                                                <div class="row">
+                                                    <div class="col-auto"><img class="avatar p-1 me-2"
+                                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-11.jpg"
+                                                            alt="Millicent Henry"></div>
+                                                    <div class="col ms-n3 pt-2 text-sm text-gray-800"><strong
+                                                            class="text-dark">Millicent Henry </strong>commented on "How
+                                                        to
+                                                        season
+                                                        your
+                                                        new grill."
+                                                        <div class="text-gray-500 small">14m ago</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="card-body"></div>
+                        </div>
+                    </div>
+                    <!--Xaviera END -->
+                </div>
+
+                <div class="card card-table mb-4 ">
+                    <div class="card-header">
+                        <h5 class="card-heading"> Latest Contracts</h5>
+                        <div class="card-header-more">
+                            <button class="btn-header-more" type="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                            <div class="dropdown-menu dropdown-menu-end text-sm"><a class="dropdown-item" href="#!"><i
+                                        class="fas fa-expand-arrows-alt opacity-5 me-2"></i>Expand</a><a
+                                    class="dropdown-item" href="#!"><i
+                                        class="far fa-window-minimize opacity-5 me-2"></i>Minimize</a><a
+                                    class="dropdown-item" href="#!"><i class="fas fa-redo opacity-5 me-2"></i>
+                                    Reload</a><a class="dropdown-item" href="#!"><i
+                                        class="far fa-trash-alt opacity-5 me-2"></i> Remove
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="dataTable-top">
+                            <div class="dataTable-dropdown"><span class="me-2" id="categoryBulkActionOrders">
+                                    <select class="form-select form-select-sm d-inline w-auto"
+                                        name="categoryBulkAction">
+                                        <option>Bulk Actions</option>
+                                        <option>Delete</option>
+                                    </select>
+                                    <button class="btn btn-sm btn-outline-primary align-top">Apply
+                                    </button></span><label><select
+                                        class="dataTable-selector form-select form-select-sm">
+                                        <option value="5" selected="">5</option>
+                                        <option value="10">10</option>
+                                        <option value="15">15</option>
+                                        <option value="20">20</option>
+                                        <option value="25">25</option>
+                                    </select> entries per page</label></div>
+                            <div class="dataTable-search"><input class="dataTable-input form-control form-control-sm"
+                                    placeholder="Search..." type="text"></div>
+                        </div>
+                        <div class="dataTable-container">
+                            <table class="table table-hover text-sm text-gray-700 mb-0 dataTable-table">
+                                <!-- header -->
+                                <thead>
+                                    <tr>
+                                        <th style="width: 40.2899%;"><a href="#" class="dataTable-sorter">Name</a>
+                                        </th>
+                                        <th style="width: 14.4928%;"><a href="#" class="dataTable-sorter">Company</a>
+                                        </th>
+                                        <th style="width: 13.5266%;"><a href="#" class="dataTable-sorter">Status</a>
+                                        </th>
+                                        <th style="width: 16.1353%;"><a href="#" class="dataTable-sorter">Contract</a>
+                                        </th>
+                                        <th style="width: 15.5556%;"><a href="#" class="dataTable-sorter">Date </a>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="align-middle">
+                                        <td>
+                                            <div class="d-flex align-items-center"><span class="avatar p-1 me-2"><span
+                                                        class="avatar-text avatar-primary-light">N </span></span>
+                                                <div class="pt-1"><strong>Nielsen Cobb</strong><br><span
+                                                        class="text-muted text-sm">nielsencobb@memora.com</span></div>
+                                            </div>
+                                        </td>
+                                        <td> <strong>Memora</strong><br><span class="text-muted">Graniteville</span>
+                                        </td>
+                                        <td><span class="badge badge-success-light"> <span
+                                                    class="indicator"></span>Open</span>
+                                        </td>
+                                        <td style="min-width: 125px;">
+                                            <div class="d-flex align-items-center"><span class="me-2">77%</span>
+                                                <div class="progress progress-table">
+                                                    <div class="progress-bar" style="width:77%">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="max-width: 120px">
+                                            <div class="d-flex align-items-center justify-content-between"><span
+                                                    class="me-3">2021/12/20</span>
+                                                <div>
+                                                    <button class="btn-header-more" type="button"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                                    <div class="dropdown-menu dropdown-menu-end text-sm"><a
+                                                            class="dropdown-item" href="#!"><i
+                                                                class="fas fa-expand-arrows-alt opacity-5 me-2"></i>Expand</a><a
+                                                            class="dropdown-item" href="#!"><i
+                                                                class="far fa-edit opacity-5 me-2"></i>Edit</a><a
+                                                            class="dropdown-item" href="#!"><i
+                                                                class="far fa-trash-alt opacity-5 me-2"></i> Remove </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <td>
+                                            <div class="d-flex align-items-center"><img class="avatar p-1 me-2"
+                                                    src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-1.jpg"
+                                                    alt="Margret Cote">
+                                                <div class="pt-1"><strong>Margret Cote</strong><br><span
+                                                        class="text-muted text-sm">margretcote@zilidium.com</span></div>
+                                            </div>
+                                        </td>
+                                        <td> <strong>Zilidium</strong><br><span class="text-muted">Foxworth</span></td>
+                                        <td><span class="badge badge-danger-light"> <span
+                                                    class="indicator"></span>Closed</span>
+                                        </td>
+                                        <td style="min-width: 125px;">
+                                            <div class="d-flex align-items-center"><span class="me-2">22%</span>
+                                                <div class="progress progress-table">
+                                                    <div class="progress-bar" style="width:22%">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="max-width: 120px">
+                                            <div class="d-flex align-items-center justify-content-between"><span
+                                                    class="me-3">2021/09/12</span>
+                                                <div>
+                                                    <button class="btn-header-more" type="button"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                                    <div class="dropdown-menu dropdown-menu-end text-sm"><a
+                                                            class="dropdown-item" href="#!"><i
+                                                                class="fas fa-expand-arrows-alt opacity-5 me-2"></i>Expand</a><a
+                                                            class="dropdown-item" href="#!"><i
+                                                                class="far fa-edit opacity-5 me-2"></i>Edit</a><a
+                                                            class="dropdown-item" href="#!"><i
+                                                                class="far fa-trash-alt opacity-5 me-2"></i> Remove </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <td>
+                                            <div class="d-flex align-items-center"><img class="avatar p-1 me-2"
+                                                    src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-2.jpg"
+                                                    alt="Rachel Vinson">
+                                                <div class="pt-1"><strong>Rachel Vinson</strong><br><span
+                                                        class="text-muted text-sm">rachelvinson@chorizon.com</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td> <strong>Chorizon</strong><br><span class="text-muted">Eastmont</span></td>
+                                        <td><span class="badge badge-warning-light"> <span class="indicator"></span>On
+                                                Hold</span>
+                                        </td>
+                                        <td style="min-width: 125px;">
+                                            <div class="d-flex align-items-center"><span class="me-2">28%</span>
+                                                <div class="progress progress-table">
+                                                    <div class="progress-bar" style="width:28%">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="max-width: 120px">
+                                            <div class="d-flex align-items-center justify-content-between"><span
+                                                    class="me-3">2021/10/01</span>
+                                                <div>
+                                                    <button class="btn-header-more" type="button"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                                    <div class="dropdown-menu dropdown-menu-end text-sm"><a
+                                                            class="dropdown-item" href="#!"><i
+                                                                class="fas fa-expand-arrows-alt opacity-5 me-2"></i>Expand</a><a
+                                                            class="dropdown-item" href="#!"><i
+                                                                class="far fa-edit opacity-5 me-2"></i>Edit</a><a
+                                                            class="dropdown-item" href="#!"><i
+                                                                class="far fa-trash-alt opacity-5 me-2"></i> Remove </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <td>
+                                            <div class="d-flex align-items-center"><span class="avatar p-1 me-2"><span
+                                                        class="avatar-text avatar-warning-light">G </span></span>
+                                                <div class="pt-1"><strong>Gabrielle Aguirre</strong><br><span
+                                                        class="text-muted text-sm">gabrielleaguirre@comverges.com</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td> <strong>Comverges</strong><br><span class="text-muted">Whitewater</span>
+                                        </td>
+                                        <td><span class="badge badge-info-light"> <span class="indicator"></span>In
+                                                Progress</span>
+                                        </td>
+                                        <td style="min-width: 125px;">
+                                            <div class="d-flex align-items-center"><span class="me-2">89%</span>
+                                                <div class="progress progress-table">
+                                                    <div class="progress-bar" style="width:89%">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="max-width: 120px">
+                                            <div class="d-flex align-items-center justify-content-between"><span
+                                                    class="me-3">2021/06/01</span>
+                                                <div>
+                                                    <button class="btn-header-more" type="button"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                                    <div class="dropdown-menu dropdown-menu-end text-sm"><a
+                                                            class="dropdown-item" href="#!"><i
+                                                                class="fas fa-expand-arrows-alt opacity-5 me-2"></i>Expand</a><a
+                                                            class="dropdown-item" href="#!"><i
+                                                                class="far fa-edit opacity-5 me-2"></i>Edit</a><a
+                                                            class="dropdown-item" href="#!"><i
+                                                                class="far fa-trash-alt opacity-5 me-2"></i> Remove </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <td>
+                                            <div class="d-flex align-items-center"><img class="avatar p-1 me-2"
+                                                    src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-4.jpg"
+                                                    alt="Spears Collier">
+                                                <div class="pt-1"><strong>Spears Collier</strong><br><span
+                                                        class="text-muted text-sm">spearscollier@remold.com</span></div>
+                                            </div>
+                                        </td>
+                                        <td> <strong>Remold</strong><br><span class="text-muted">Hebron</span></td>
+                                        <td><span class="badge badge-success-light"> <span
+                                                    class="indicator"></span>Open</span>
+                                        </td>
+                                        <td style="min-width: 125px;">
+                                            <div class="d-flex align-items-center"><span class="me-2">49%</span>
+                                                <div class="progress progress-table">
+                                                    <div class="progress-bar" style="width:49%">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="max-width: 120px">
+                                            <div class="d-flex align-items-center justify-content-between"><span
+                                                    class="me-3">2021/03/12</span>
+                                                <div>
+                                                    <button class="btn-header-more" type="button"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                                    <div class="dropdown-menu dropdown-menu-end text-sm"><a
+                                                            class="dropdown-item" href="#!"><i
+                                                                class="fas fa-expand-arrows-alt opacity-5 me-2"></i>Expand</a><a
+                                                            class="dropdown-item" href="#!"><i
+                                                                class="far fa-edit opacity-5 me-2"></i>Edit</a><a
+                                                            class="dropdown-item" href="#!"><i
+                                                                class="far fa-trash-alt opacity-5 me-2"></i> Remove </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataTable-bottom">
+                            <div class="dataTable-info">Showing 1 to 5 of 30 entries</div>
+                            <nav class="dataTable-pagination">
+                                <ul class="dataTable-pagination-list">
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li class=""><a href="#">2</a></li>
+                                    <li class=""><a href="#">3</a></li>
+                                    <li class=""><a href="#">4</a></li>
+                                    <li class=""><a href="#">5</a></li>
+                                    <li class=""><a href="#">6</a></li>
+                                    <li class="pager"><a href="#" data-page="2">›</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Customers -->
+                <div class="row">
+                    <!-- Widget Type 12-->
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="row gx-2 gx-lg-4 gy-5">
+                                    <div class="col-sm-5">
+                                        <div class="h2">625</div>
+                                        <p class="subtitle">New Customers</p>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="60"
+                                                aria-valuemin="0" aria-valuemax="100" style="width:60%"> </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <div class="row">
+                                            <div class="col-6 text-center">
+                                                <div class="h3">254</div>
+                                                <p class="text-muted fw-normal">Affiliates</p>
+                                                <hr>
+                                                <p class="text-muted mb-0">+125</p>
+                                            </div>
+                                            <div class="col-6 text-center">
+                                                <div class="h3">328</div>
+                                                <p class="text-muted">SEM</p>
+                                                <hr>
+                                                <p class="text-muted mb-0">+144 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body d-flex align-items-center">
+                                <div class="row gy-5 flex-fill">
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-2 text-lg"><i class="fas fa-arrow-down text-danger"></i>
+                                            </div>
+                                            <div class="col-sm-10">
+                                                <h2>1,112</h2>
+                                                <h6 class="text-muted fw-normal p-b-20 p-t-10">Affiliate Sales</h6>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-danger" role="progressbar"
+                                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                                                        style="width:75%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-2 text-lg"><i class="fas fa-arrow-up text-success"></i>
+                                            </div>
+                                            <div class="col-sm-10">
+                                                <h2>258</h2>
+                                                <h6 class="text-muted fw-normal p-b-20 p-t-10">Ads Sales</h6>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-success" role="progressbar"
+                                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                                                        style="width:50%"> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Updates -->
+                <div class="row">
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h5 class="card-heading">Project updates</h5>
+                                <div class="card-header-more">
+                                    <button class="btn-header-more" type="button" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false"><i
+                                            class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu dropdown-menu-end text-sm"><a class="dropdown-item"
+                                            href="#!"><i
+                                                class="fas fa-expand-arrows-alt opacity-5 me-2"></i>Expand</a><a
+                                            class="dropdown-item" href="#!"><i
+                                                class="far fa-window-minimize opacity-5 me-2"></i>Minimize</a><a
+                                            class="dropdown-item" href="#!"><i class="fas fa-redo opacity-5 me-2"></i>
+                                            Reload</a><a class="dropdown-item" href="#!"><i
+                                                class="far fa-trash-alt opacity-5 me-2"></i> Remove </a></div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <p class="mb-2"><strong>Publish New Theme </strong><span
+                                            class="float-end text-gray-500 text-sm">10 mins ago </span></p>
+                                    <p class="card-text"><img class="avatar avatar-sm avatar-stacked p-1"
+                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-0.jpg"
+                                            alt="User" data-bs-toggle="tooltip" data-placement="top"
+                                            aria-label="Nielsen Cobb" data-bs-original-title="Nielsen Cobb"><img
+                                            class="avatar avatar-sm avatar-stacked p-1"
+                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-1.jpg"
+                                            alt="User" data-bs-toggle="tooltip" data-placement="top"
+                                            aria-label="Margret Cote" data-bs-original-title="Margret Cote">
+                                    </p>
+                                    <p class="mb-2"><strong>Internal Linkbuilding </strong><span
+                                            class="float-end text-gray-500 text-sm">2 hours ago </span></p>
+                                    <p class="card-text"><img class="avatar avatar-sm avatar-stacked p-1"
+                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-1.jpg"
+                                            alt="User" data-bs-toggle="tooltip" data-placement="top"
+                                            aria-label="Nielsen Cobb" data-bs-original-title="Nielsen Cobb"><img
+                                            class="avatar avatar-sm avatar-stacked p-1"
+                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-2.jpg"
+                                            alt="User" data-bs-toggle="tooltip" data-placement="top"
+                                            aria-label="Margret Cote" data-bs-original-title="Margret Cote"><img
+                                            class="avatar avatar-sm avatar-stacked p-1"
+                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-3.jpg"
+                                            alt="User" data-bs-toggle="tooltip" data-placement="top"
+                                            aria-label="Rachel Vinson" data-bs-original-title="Rachel Vinson"><img
+                                            class="avatar avatar-sm avatar-stacked p-1"
+                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-4.jpg"
+                                            alt="User" data-bs-toggle="tooltip" data-placement="top"
+                                            aria-label="Gabrielle Aguirre" data-bs-original-title="Gabrielle Aguirre">
+                                    </p>
+                                    <p class="mb-2"><strong>New Writer Onboarding </strong><span
+                                            class="float-end text-gray-500 text-sm">3 days ago </span></p>
+                                    <p class="card-text"><img class="avatar avatar-sm avatar-stacked p-1"
+                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-2.jpg"
+                                            alt="User" data-bs-toggle="tooltip" data-placement="top"
+                                            aria-label="Nielsen Cobb" data-bs-original-title="Nielsen Cobb"><img
+                                            class="avatar avatar-sm avatar-stacked p-1"
+                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-3.jpg"
+                                            alt="User" data-bs-toggle="tooltip" data-placement="top"
+                                            aria-label="Margret Cote" data-bs-original-title="Margret Cote"><img
+                                            class="avatar avatar-sm avatar-stacked p-1"
+                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-4.jpg"
+                                            alt="User" data-bs-toggle="tooltip" data-placement="top"
+                                            aria-label="Rachel Vinson" data-bs-original-title="Rachel Vinson">
+                                    </p>
+                                    <p class="mb-2"><strong>Blog Post Drafts </strong><span
+                                            class="float-end text-gray-500 text-sm">5 days ago </span></p>
+                                    <p class="card-text"><img class="avatar avatar-sm avatar-stacked p-1"
+                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-3.jpg"
+                                            alt="User" data-bs-toggle="tooltip" data-placement="top"
+                                            aria-label="Nielsen Cobb" data-bs-original-title="Nielsen Cobb"><img
+                                            class="avatar avatar-sm avatar-stacked p-1"
+                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-4.jpg"
+                                            alt="User" data-bs-toggle="tooltip" data-placement="top"
+                                            aria-label="Margret Cote" data-bs-original-title="Margret Cote"><img
+                                            class="avatar avatar-sm avatar-stacked p-1"
+                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-5.jpg"
+                                            alt="User" data-bs-toggle="tooltip" data-placement="top"
+                                            aria-label="Rachel Vinson" data-bs-original-title="Rachel Vinson"><img
+                                            class="avatar avatar-sm avatar-stacked p-1"
+                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-6.jpg"
+                                            alt="User" data-bs-toggle="tooltip" data-placement="top"
+                                            aria-label="Gabrielle Aguirre"
+                                            data-bs-original-title="Gabrielle Aguirre"><img
+                                            class="avatar avatar-sm avatar-stacked p-1"
+                                            src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/img/avatar-7.jpg"
+                                            alt="User" data-bs-toggle="tooltip" data-placement="top"
+                                            aria-label="Spears Collier" data-bs-original-title="Spears Collier">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h5 class="card-heading">Closed projects</h5>
+                                <div class="card-header-more">
+                                    <button class="btn-header-more" type="button" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false"><i
+                                            class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu dropdown-menu-end text-sm"><a class="dropdown-item"
+                                            href="#!"><i
+                                                class="fas fa-expand-arrows-alt opacity-5 me-2"></i>Expand</a><a
+                                            class="dropdown-item" href="#!"><i
+                                                class="far fa-window-minimize opacity-5 me-2"></i>Minimize</a><a
+                                            class="dropdown-item" href="#!"><i class="fas fa-redo opacity-5 me-2"></i>
+                                            Reload</a><a class="dropdown-item" href="#!"><i
+                                                class="far fa-trash-alt opacity-5 me-2"></i> Remove </a></div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex align-items-center">
+                                <div class="chartjs-size-monitor">
+                                    <div class="chartjs-size-monitor-expand">
+                                        <div class=""></div>
+                                    </div>
+                                    <div class="chartjs-size-monitor-shrink">
+                                        <div class=""></div>
+                                    </div>
+                                </div>
+                                <img src="../img/Close_Project.png" class="m-auto" alt="">
+                            </div>
+                            <div class="card-footer bg-white">
+                                <h3 class="subtitle text-gray-500 fw-normal text-center">Total closed projects</h3>
+                                <div class="row justify-content-center align-items-center">
+                                    <div class="col-auto">
+                                        <div class="h4 mb-0">2,235</div>
+                                    </div>
+                                    <div class="col-auto"> <span class="text-muted me-2">+128</span><span
+                                            class="badge badge-success-light"><i
+                                                class="fas fa-arrow-up me-2"></i>21.3%</span>
+                                    </div>
+                                </div>
+                                <div class="row mt-4 card-text text-sm justify-content-center">
+                                    <div class="col-auto"><span class="indicator" style="background: #0d6efd">
+                                        </span><span class="text-gray-500">Sandra</span>
+                                        <div class="ms-3 h6">250</div>
+                                    </div>
+                                    <div class="col-auto"><span class="indicator" style="background: #3d8bfd">
+                                        </span><span class="text-gray-500">Becky</span>
+                                        <div class="ms-3 h6">50</div>
+                                    </div>
+                                    <div class="col-auto"><span class="indicator" style="background: #6ea8fe">
+                                        </span><span class="text-gray-500">Julie</span>
+                                        <div class="ms-3 h6">100</div>
+                                    </div>
+                                    <div class="col-auto"><span class="indicator" style="background: #9ec5fe">
+                                        </span><span class="text-gray-500">Romero</span>
+                                        <div class="ms-3 h6">40</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h5 class="card-heading">Tickets solved</h5>
+                                <div class="card-header-more">
+                                    <button class="btn-header-more" type="button" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false"><i
+                                            class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu dropdown-menu-end text-sm"><a class="dropdown-item"
+                                            href="#!"><i
+                                                class="fas fa-expand-arrows-alt opacity-5 me-2"></i>Expand</a><a
+                                            class="dropdown-item" href="#!"><i
+                                                class="far fa-window-minimize opacity-5 me-2"></i>Minimize</a><a
+                                            class="dropdown-item" href="#!"><i class="fas fa-redo opacity-5 me-2"></i>
+                                            Reload</a><a class="dropdown-item" href="#!"><i
+                                                class="far fa-trash-alt opacity-5 me-2"></i> Remove </a></div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex align-items-center">
+                                <div class="chartjs-size-monitor">
+                                    <div class="chartjs-size-monitor-expand">
+                                        <div class=""></div>
+                                    </div>
+                                    <div class="chartjs-size-monitor-shrink">
+                                        <div class=""></div>
+                                    </div>
+                                </div>
+                                <img src="../img/Tickets_Solved.png" class="m-auto" alt="">
+                            </div>
+                            <div class="card-footer bg-white">
+                                <h3 class="subtitle text-gray-500 fw-normal text-center">Tickets solved</h3>
+                                <div class="row justify-content-center align-items-center">
+                                    <div class="col-auto">
+                                        <div class="h4 mb-0">530</div>
+                                    </div>
+                                    <div class="col-auto"> <span class="text-muted me-2">-85</span><span
+                                            class="badge badge-danger-light"><i
+                                                class="fas fa-arrow-down me-2"></i>-15.6%</span>
+                                    </div>
+                                </div>
+                                <div class="row mt-4 card-text text-sm justify-content-center">
+                                    <div class="col-auto"><span class="indicator" style="background: #6610f2">
+                                        </span><span class="text-gray-500">John</span>
+                                        <div class="ms-3 h6">300</div>
+                                    </div>
+                                    <div class="col-auto"><span class="indicator" style="background: #8540f5">
+                                        </span><span class="text-gray-500">Mark</span>
+                                        <div class="ms-3 h6">50</div>
+                                    </div>
+                                    <div class="col-auto"><span class="indicator" style="background: #a370f7">
+                                        </span><span class="text-gray-500">Frank</span>
+                                        <div class="ms-3 h6">100</div>
+                                    </div>
+                                    <div class="col-auto"><span class="indicator" style="background: #c29ffa">
+                                        </span><span class="text-gray-500">Danny</span>
+                                        <div class="ms-3 h6">80</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <footer class="footer bg-white shadow align-self-end py-3 px-xl-5 w-100">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 text-center text-md-start fw-bold">
+                                <p class="mb-2 mb-md-0 fw-bold">Your company © 2023</p>
+                            </div>
+                            <div class="col-md-6 text-center text-md-end text-gray-400">
+                                <p class="mb-0">Version 1.3.2</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </main>
+    <script src="./menu.js"></script>
+    <script
+        src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script
+        src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/vendor/simple-datatables/umd/simple-datatables.js"></script>
+    <script src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/vendor/chart.js/Chart.min.js"></script>
+    <script src="js/charts-defaults.8a5fcd99.js"></script>
+    <script src="js/index-default.50a9efee.js"></script>
+    <script src="js/theme.87f0a411.js"></script>
+    <script src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/vendor/prismjs/prism.js"></script>
+    <script
+        src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/vendor/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+    <script
+        src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/vendor/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script
+        src="https://d19m59y37dris4.cloudfront.net/bubbly/1-3-2/vendor/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script type="text/javascript">
+        Prism.plugins.NormalizeWhitespace.setDefaults({
+            'remove-trailing': true,
+            'remove-indent': true,
+            'left-trim': true,
+            'right-trim': true,
+        });
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+</body>
+
+</html>
