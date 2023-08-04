@@ -84,7 +84,7 @@ nav {
 @media (max-width: 1199px) {
   .container-all {
     #menu {
-      width: 90px;
+      width: 100px;
       button {
         font-size: var(--font-12px) !important;
         .icon {
@@ -92,13 +92,13 @@ nav {
         }
         .menu-topic {
           line-height: 20px;
-          margin-bottom: 22px;
+          margin-bottom: 18px;
         }
       }
 
       .accordion-button::after {
         position: absolute;
-        bottom: 0px;
+        bottom: 2px;
         left: calc(50% - 10px);
       }
       // .accordion-button:not(.collapse)::after{
@@ -107,6 +107,6 @@ nav {
     }
   }
   #menu.menu-active {
-    margin-left: -90px;
+    margin-left: -100px;
   }
 }

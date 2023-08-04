@@ -90,11 +90,11 @@ nav {
   }
   .container-all #menu button .menu-topic {
     line-height: 20px;
-    margin-bottom: 18px;
+    margin-bottom: 22px;
   }
   .container-all #menu .accordion-button::after {
     position: absolute;
-    bottom: 2px;
+    bottom: 0px;
     left: calc(50% - 10px);
   }
   #menu.menu-active {
