@@ -18,9 +18,13 @@ nav {
     background-color: white;
     color: rgb(250, 250, 250);
     transition: 1s;
-    #menu-text {
+    .menu-text {
       height: 60px;
       line-height: 50px;
+    }
+    .menu{
+      width: 100%;
+      height: 60px;
     }
     .bg-p{
       background-color: #4650dd;

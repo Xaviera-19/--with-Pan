@@ -23,9 +23,13 @@ nav {
   color: rgb(250, 250, 250);
   transition: 1s;
 }
-.container-all #menu #menu-text {
+.container-all #menu .menu-text {
   height: 60px;
   line-height: 50px;
+}
+.container-all #menu .menu {
+  width: 100%;
+  height: 60px;
 }
 .container-all #menu .bg-p {
   background-color: #4650dd;
