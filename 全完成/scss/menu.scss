@@ -44,11 +44,11 @@ nav {
 
     .accordion-button:nth-of-type(1)::after {
       // fill: white;
-      background-image: url(../img/下箭頭.svg);
+      background-image: url("../img/downarrow.svg");
     }
     .accordion-button:nth-of-type(n + 1)::after {
       // fill: #aaaaaa;
-      background-image: url(../img/下箭頭gray.svg);
+      background-image: url("../img/downarrowgray.svg");
     }
     ul li a {
       width: 100%;
