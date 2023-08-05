@@ -7,10 +7,10 @@
 //     });
 
 // })
-console.log(document.querySelector("#collapse"))
+// console.log(document.querySelector("#collapse"))
 document.querySelector("#collapse").addEventListener("click",
     function () {
-        console.log(document.querySelector("#menu").classList)
+        // console.log(document.querySelector("#menu").classList)
         document.querySelector("#menu").classList.toggle('menu-active');
         document.querySelector("#main").classList.toggle('main-active');
     }
