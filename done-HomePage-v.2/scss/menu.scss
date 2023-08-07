@@ -92,21 +92,39 @@
   }
 }
 @media (max-width: 992px) {
-  #main {
-    // width: calc(100% - 105px) !important;
+  // #main {
+  //   // width: calc(100% - 105px) !important;
+  //   width: calc(100% - 100px) !important;
+  //   // margin: 10px !important;
+  // }
+
+  // #main.main-active {
+  //   width: 100% !important;
+  // }
+
+  #body {
     width: calc(100% - 100px) !important;
-    // margin: 10px !important;
   }
-  #main.main-active {
+  #body.main-active {
     width: 100% !important;
   }
 }
 @media (max-width: 768px) {
-  #main {
-    // width: calc(100% - 105px) !important;
+  // #main {
+  //   // width: calc(100% - 105px) !important;
+  //   width: calc(100% - 100px) !important;
+  // }
+  // #main.main-active {
+  //   width: 100% !important;
+  // }
+  #body {
     width: calc(100% - 100px) !important;
   }
-  #main.main-active {
+  #body.main-active {
     width: 100% !important;
   }
+  // .footer-w{
+  //   width: calc(100% - 100px) !important;
+
+  // }
 }

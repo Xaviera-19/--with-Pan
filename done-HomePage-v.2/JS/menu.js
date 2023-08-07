@@ -13,5 +13,7 @@ document.querySelector("#collapse").addEventListener("click",
         // console.log(document.querySelector("#menu").classList)
         document.querySelector("#menu").classList.toggle('menu-active');
         document.querySelector("#main").classList.toggle('main-active');
+        document.querySelector("#body").classList.toggle('body-active');
+
     }
 );
