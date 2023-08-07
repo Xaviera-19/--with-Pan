@@ -64,6 +64,8 @@
   .container-all {
     #menu {
       width: 100px;
+      box-shadow: 1px 0px 7px 5px rgb(211, 211, 211);
+      margin-right: 3px;
       button {
         font-size: var(--font-12px) !important;
         .icon {

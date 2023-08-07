@@ -3,7 +3,7 @@
   --font-12px: 12px;
   --reset: reset;
   --25px: 25px;
-  /* --QQrem: 1px; */
+  --QQrem: 1px;
 }
 
 .container-all {
@@ -61,6 +61,8 @@
 @media (max-width: 1199px) {
   .container-all #menu {
     width: 100px;
+    box-shadow: 1px 0px 7px 5px rgb(211, 211, 211);
+    margin-right: 3px;
   }
   .container-all #menu button {
     font-size: var(--font-12px) !important;
